@@ -63,7 +63,6 @@ fn main() {
             return;
         }
     };
-
     // Create a buffered reader
     let reader = BufReader::new(file);
     let mut total: i32 = 0;
@@ -78,6 +77,7 @@ fn main() {
             }
         };
         println!("original string: {}", &text);
+        //to solve part1 just don't modify the string
         let modified_string = modify_string(&numbers, text);
         let first = get_digit(&modified_string);
         let second = get_digit(&modified_string.chars().rev().collect());
